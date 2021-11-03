@@ -129,7 +129,7 @@ console.log(getFlavorByIndex(originalFlavors[6]))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
-as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
+as opposed to just a. Your task is to get an rbitrarily removing the first or last flavorindex by flavor name, and remove that single flavor from the array.  
 
 Use the removeFlavorByName function below to do the following:
   1. Receive an array
@@ -142,8 +142,13 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, flavor){
+  for (let i = 0; i < array.length; i ++) {
+    if(array[i] === flavor) {
+      array.splice(i, 1);
+    }
+  }
+  return array;
 }
 
 
